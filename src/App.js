@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoList from './page/todoList/todoList';
+import Header from './component/layout/header';
+import { createContext, useEffect, useState } from 'react';
+import './scss/style.scss';
 
+export const DarkModeContext = createContext();
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => setDarkMode((mode) => !mode);
+
+  useEffect(() => {
+    const targetBody = document.getElementsByTagName('body')[0];
+    if (targetBody.classList.contains('dark')) {
+      targetBody.classList.remove('dark');
+    } else {
+      targetBody.classList.add('dark');
+    }
+  }, [darkMode]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      <div className={'wrap'}>
+        <TodoList />
+      </div>
+    </DarkModeContext.Provider>
   );
 }
 

@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+// Color
+$black: #000;
+$medium-black: #333;
+$white: #fff;
+
+$white-gray: #fafafa;
+$light-gray: #ededed;
+$gray: #dcdcdc;
+$medium-gray: #999;
+$dark-gray: #666;
+
+$red: #da4242;
+$dark-red: #C3242E;
+$deep-red: #72160d;
+
+$burgundy: #600000;
+
+$blue: #1677ff;
+$light-blue: #dce9f1;
+
+$green: #006845;
+$medium-green: #90c992;
+$light-green: #e5f0e5;
+$light-green-ver2 : #3ac47d;
+
+// Break Point
+$media-mini-phone: 359px;
+$media-phone: 767px;
+$media-tablet: 1279px;
+
+// Font Family
+$noto-sans: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 돋움, Dotum, sans-serif;
+
+// Font Size
+$font-size-10: 1.0rem;
+$font-size-11: 1.1rem;
+$font-size-12: 1.2rem;
+$font-size-13: 1.3rem;
+$font-size-14: 1.4rem;
+$font-size-15: 1.5rem;
+$font-size-16: 1.6rem; // default
+$font-size-17: 1.7rem;
+$font-size-18: 1.8rem;
+$font-size-20: 2rem;
+$font-size-24: 2.4rem;
+$font-size-30: 3rem;
+
+// Route
+$common: " ../assets/images/common";
+
+// Etc
+$headerHeight: 50px;

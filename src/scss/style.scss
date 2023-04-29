@@ -1,0 +1,116 @@
+@import "variables","reset" ;
+
+body{
+  .header {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:10px 20px;
+
+    .todoList-status{
+      display: flex;
+      align-items: center;
+      li{
+        padding-left:10px;
+        .status-btn{
+          padding-bottom:5px;
+          border-bottom:2px solid transparent;
+
+          &.active{
+            border-color:#ddd;
+          }
+        }
+
+        &:first-child {
+          padding-left:0;
+        }
+      }
+    }
+  }
+
+
+
+  .todoList-box{
+    padding:30px 20px 0;
+    .todoList{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top:20px;
+
+      &:first-child{
+        padding-top:0;
+      }
+
+      label{
+        display:flex;
+        align-items: center;
+        .input{
+          display:none;
+        }
+
+        .icon-input-check{
+          width:20px;
+          height:20px;
+          margin-right:5px;
+        }
+
+        .input:checked{
+          color:#3ac47d;
+        }
+      }
+    }
+  }
+
+  .todoList-add-box{
+    position: fixed;
+    top:auto;
+    left:0;
+    bottom:0;
+    z-index: 1;
+    width:100%;
+    display:flex;
+    align-items: center;
+    .todoList-input{
+      width:calc(100% - 40px);
+      height:40px;
+      border:0;
+      border-radius:0;
+      border-top:1px solid #3ac47d;
+    }
+    .todoList-add-btn{
+      width:40px;
+      height:40px;
+      background-color:#3ac47d;
+      color:#fff;
+    }
+  }
+}
+
+body {
+  &.dark{
+    background: #000;
+    .header {
+      background:rgba(255,255,255,0.3);
+
+      .mode-choose-btn{
+        color:$white;
+      }
+
+
+      .todoList-status{
+        li{
+          .status-btn {
+            color:$white;
+            &.active {
+              border-color:#3ac47d;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
